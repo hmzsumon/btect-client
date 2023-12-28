@@ -14,13 +14,13 @@ export default class SimpleSlider extends Component {
 			autoplaySpeed: 4000,
 		};
 		const sliderItems = [
-			'./images/carousel/ai-grid.png',
-			'./images/carousel/b2.jpg',
-			'./images/carousel/trading.png',
-			'./images/carousel/b1.jpg',
+			'./images/carousel/1.png',
+			'./images/carousel/2.jpg',
+			'./images/carousel/3.png',
+			'./images/carousel/4.jpg',
 		];
 		return (
-			<div className=' bg-gray-900 px-2 w-[95%] mx-auto   py-4'>
+			<div className=' bg-gray-900 px-2 w-[90%] mx-auto md:mb-6  py-4'>
 				<Slider {...settings}>
 					{sliderItems.map((item, index) => (
 						<div className={`px-1`} key={index}>
