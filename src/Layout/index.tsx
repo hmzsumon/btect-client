@@ -25,7 +25,7 @@ const Layout = ({ children }: PropsWithChildren<{}>) => {
 	return (
 		<>
 			<Head>
-				<title>Glomax</title>
+				<title>Globalx</title>
 			</Head>
 			<Header />
 			{children}
