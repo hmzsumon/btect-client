@@ -20,14 +20,14 @@ export default class SimpleSlider extends Component {
 			'./images/carousel/4.png',
 		];
 		return (
-			<div className=' bg-gray-900 px-2 w-[90%] mx-auto md:mb-6  py-4'>
+			<div className=' bg-transparent w-[90%] mx-auto md:mb-6  '>
 				<Slider {...settings}>
 					{sliderItems.map((item, index) => (
 						<div className={`px-1`} key={index}>
 							<img
 								src={item}
 								alt=''
-								className='w-full rounded-xl min-h-[120px]'
+								className='w-full rounded-xl min-h-[120px] md:min-h-[200px]'
 							/>
 						</div>
 					))}
