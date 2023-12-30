@@ -61,6 +61,12 @@ export const aiRobotApi = apiSlice.injectEndpoints({
 			}),
 			invalidatesTags: ['User', 'AiRobot'],
 		}),
+
+		// get is_ai_robot on or off
+		getIsAiRobotOnOrOff: builder.query({
+			query: () => `/aiRobot/company`,
+			providesTags: ['AiRobot'],
+		}),
 	}),
 });
 
@@ -72,4 +78,5 @@ export const {
 	useGetAllAiRobotQuery,
 	useUpdateAiRobotAutoCreateMutation,
 	useClaimAiRobotProfitMutation,
+	useGetIsAiRobotOnOrOffQuery,
 } = aiRobotApi;

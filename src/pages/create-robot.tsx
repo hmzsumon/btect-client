@@ -26,6 +26,7 @@ import Link from 'next/link';
 import {
 	useCreateAiRobotMutation,
 	useEditAiRobotMutation,
+	useGetIsAiRobotOnOrOffQuery,
 	useMyAiRobotQuery,
 } from '@/features/aiRobot/aiRobotApi';
 import { useLoadUserQuery } from '@/features/auth/authApi';
@@ -46,6 +47,10 @@ const CreateRobot = () => {
 	});
 	// console.log(data);
 	const { aiRobot } = data || {};
+
+	const { data: isAiRobot } = useGetIsAiRobotOnOrOffQuery(undefined);
+	const { is_ai_robot } = isAiRobot || {};
+	console.log(is_ai_robot);
 
 	const { ticker: ticker2 } = useTickerContext();
 	const { user } = useSelector((state: any) => state.auth);
@@ -371,7 +376,8 @@ const CreateRobot = () => {
 									!amount ||
 									!grid ||
 									isLoading ||
-									e_isLoading
+									e_isLoading ||
+									!is_ai_robot
 								}
 								onClick={mode === 'edit' ? handleEditRobot : handleCreateRobot}
 							>
