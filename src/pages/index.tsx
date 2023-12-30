@@ -13,16 +13,24 @@ import TradeSection from '@/components/Home/TradeSection';
 import AiSection from '@/components/Home/AiSection';
 import WinGame from '@/components/Home/WinGame';
 import MakeUp from '@/components/Home/MakeUp';
-import Maintenance from '@/components/Home/Maintenance';
 
 const Home: NextPage = () => {
 	const { isAuthenticated } = useSelector((state: any) => state.auth);
 	return (
-		<>
+		<Layout>
 			<main className={`pt-20 ${isAuthenticated && 'pb-14'}`}>
-				<Maintenance />
+				{!isAuthenticated && <Hero />}
+				<SimpleSlider />
+				{isAuthenticated && <Notice />}
+				{isAuthenticated && <Menu />}
+				<TradeSection />
+				<AiSection />
+				<MakeUp />
+				<Help />
+				{!isAuthenticated && <StartEaring />}
+				{!isAuthenticated && <Footer />}
 			</main>
-		</>
+		</Layout>
 	);
 };
 

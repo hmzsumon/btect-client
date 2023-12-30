@@ -53,12 +53,12 @@ const AiSection = () => {
 				<div className='mt-8 md:mt-0'>
 					<div className='flex justify-center gap-6'>
 						<img
-							src='/images/ai/AI_1.png'
+							src='/images/ai/a_1.png'
 							alt='Trade1'
 							className='w-40 md:w-60'
 						/>
 						<img
-							src='/images/ai/AI_2.png'
+							src='/images/ai/a_2.png'
 							alt='Trade2'
 							className='w-40 md:w-60'
 						/>

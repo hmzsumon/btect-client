@@ -113,7 +113,7 @@ const LeftContent = () => {
 		}
 
 		if (way === 'crypto') {
-			setReceiveAmount(Number(value) - Number(value) * 0.07);
+			setReceiveAmount(Number(value) - Number(value) * 0.1);
 		} else {
 			setReceiveAmount(Number(value) - Number(value) * 0.03);
 		}
@@ -124,7 +124,7 @@ const LeftContent = () => {
 		const data = {
 			amount: amount,
 			net_amount: receiveAmount,
-			charge_p: way === 'crypto' ? 0.07 : 0.03,
+			charge_p: way === 'crypto' ? 0.1 : 0.03,
 			method: {
 				name: way,
 				network: network,
@@ -240,7 +240,7 @@ const LeftContent = () => {
 					<p className='text-xs text-blue-gray-600'>
 						processing fee:{' '}
 						<span className='italic font-bold text-blue-gray-300'>
-							{way === 'crypto' ? '7%' : '3%'}
+							{way === 'crypto' ? '10%' : '3%'}
 						</span>{' '}
 					</p>
 				</div>

@@ -31,6 +31,8 @@ const Send = () => {
 	const { user } = useSelector((state: any) => state.auth);
 	const [userId, setUserId] = React.useState('');
 	const [amount, setAmount] = React.useState('');
+	const [fee, setFee] = React.useState(0);
+	const [receiveAmount, setReceiveAmount] = React.useState(0);
 	const [amountError, setAmountError] = React.useState('');
 	const [recipient, setRecipient] = useState<any>(null);
 	const [recipientError, setRecipientError] = React.useState('');
@@ -40,6 +42,15 @@ const Send = () => {
 	const [open2, setOpen2] = useState(false);
 	const [isResend, setIsResend] = useState<boolean>(false);
 	const handleOpen2 = () => setOpen2(!open2);
+
+	// calculate fee by 5%
+	useEffect(() => {
+		if (Number(amount) >= 10) {
+			const fee = (Number(amount) * 5) / 100;
+			setFee(fee);
+			setReceiveAmount(Number(amount) - fee);
+		}
+	}, [amount]);
 	// console.log('Recipient', userId);
 	const [findUserByCustomerId, { data, isLoading, isError, error, isSuccess }] =
 		useFindUserByCustomerIdMutation();
@@ -133,6 +144,8 @@ const Send = () => {
 		const data = {
 			recipient_id: recipient?.customer_id,
 			amount: Number(amount),
+			fee: fee,
+			receive_amount: receiveAmount,
 		};
 		send(data);
 	};
@@ -257,6 +270,16 @@ const Send = () => {
 											<li className='flex items-center justify-between list-none '>
 												<span className='font-bold'>Total amount:</span>{' '}
 												<span>{amount} USDT</span>
+											</li>
+
+											<li className='flex items-center justify-between list-none '>
+												<span className='font-bold'>Charge:</span>{' '}
+												<span>{fee} USDT</span>
+											</li>
+
+											<li className='flex items-center justify-between list-none '>
+												<span className='font-bold'>Receive Amount:</span>{' '}
+												<span>{receiveAmount} USDT</span>
 											</li>
 
 											<li className='flex items-center justify-between list-none '>

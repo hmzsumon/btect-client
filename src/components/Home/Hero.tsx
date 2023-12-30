@@ -44,13 +44,13 @@ const Hero = () => {
 						<span className='text-gray-300 '>Never miss the Profit.</span>
 					</h1>
 					<div className='my-8 space-y-6 '>
-						<div className='flex items-center space-x-2'>
+						{/* <div className='flex items-center space-x-2'>
 							<AiFillGift className='text-2xl text-yellow-700' />
 							<div className='flex items-center space-x-'>
 								<p className='text-xl'>Join and Get 2 (USDT)</p>
 								<MdKeyboardArrowRight className='text-xl font-semibold text-gray-500' />
 							</div>
-						</div>
+						</div> */}
 						<div className=' space-y-4 md:w-[70%]'>
 							<button
 								className='flex items-center justify-center w-full gap-1 py-2 font-semibold text-gray-900 bg-yellow-700 rounded'

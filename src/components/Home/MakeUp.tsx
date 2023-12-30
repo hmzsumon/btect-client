@@ -6,7 +6,7 @@ const MakeUp = () => {
 			<div className='px-2 py-6 bg-black_1'>
 				<div className='space-y-2 '>
 					<h2 className='text-2xl text-center text-blue-gray-100'>
-						The numbers that make up Glomax
+						The numbers that make up Global-X
 					</h2>
 					<p className='text-center text-blue-gray-200'>
 						From trading volume to number of active clients, we are happy to

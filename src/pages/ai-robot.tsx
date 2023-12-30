@@ -112,7 +112,7 @@ const AiRobot = () => {
 											AI Robot Trading
 										</h1>
 										<p className='my-2 text-sm text-gray-500 '>
-											Deploy Glomax automation tools to trade crypto like a
+											Deploy Global-X automation tools to trade crypto like a
 											pro.Identify and replicate trading strategies on the
 											largest exchange with unparalleled liquidity.
 										</p>

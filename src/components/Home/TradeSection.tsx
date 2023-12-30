@@ -12,12 +12,12 @@ const TradeSection = () => {
 				<div className='order-2 md:order-1'>
 					<div className='flex justify-center gap-6'>
 						<img
-							src='/images/trade/Trade_1.png'
+							src='/images/trade/t_1.png'
 							alt='Trade1'
 							className='w-40 md:w-60'
 						/>
 						<img
-							src='/images/trade/Trade_2.png'
+							src='/images/trade/t_1.png'
 							alt='Trade2'
 							className='w-40 md:w-60'
 						/>

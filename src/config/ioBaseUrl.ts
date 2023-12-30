@@ -4,7 +4,7 @@ if (process.env.NODE_ENV === 'development') {
 	ioBaseUrl = 'http://localhost:5000';
 	console.log('Running in development mode');
 } else {
-	ioBaseUrl = 'https://glomax-api-1901b8e6064a.herokuapp.com';
+	ioBaseUrl = 'https://globalx-api-911660dfa77b.herokuapp.com';
 	// Code specific to production mode
 	console.log('Running in production mode');
 }

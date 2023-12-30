@@ -31,9 +31,19 @@ const Convert = () => {
 	const [convertAmount, setConvertAmount] = useState<number>(0);
 	const [main, setMain] = useState<boolean>(true);
 	const [to_wallet, setToWallet] = useState<string>('');
-
+	const [from_wallet, setFromWallet] = useState<string>('');
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(!open);
+
+	console.log('from_wallet', from_wallet);
+	console.log('to_wallet', to_wallet);
+
+	// handle from wallet change
+	const handleFromWalletChange: SelectProps['onChange'] = (value) => {
+		if (typeof value === 'string') {
+			setFromWallet(value);
+		}
+	};
 
 	// handle amount change
 	const handleAmountChange = (e: any) => {
@@ -69,7 +79,7 @@ const Convert = () => {
 
 		convert({
 			amount,
-			from: 'e_balance',
+			from: from_wallet,
 			to: to_wallet,
 			id: user?._id,
 		});
@@ -116,31 +126,43 @@ const Convert = () => {
 							<div className='px-2 rounded-sm bg-black_3'>
 								<div className='grid grid-cols-5 '>
 									<div className='col-span-4 py-2 space-y-2 text-blue-gray-300'>
-										<div className='grid grid-cols-5'>
-											<div className=' col-span-2'>
+										<div className='grid grid-cols-7'>
+											<div className='col-span-2 '>
 												<h2>From </h2>
 											</div>
 
-											<div className=' col-span-3 '>
-												<h2 className=''>Earn Balance</h2>
+											<div className='col-span-5 '>
+												<div className='w-full'>
+													<Select
+														label='Select Wallet'
+														onChange={handleFromWalletChange}
+													>
+														<Option value='earn'>Earn Balance</Option>
+														<Option value='main'>Trade Balance</Option>
+													</Select>
+												</div>
 											</div>
 										</div>
 										<div className='flex items-center justify-around'>
 											<FaLongArrowAltDown className=' text-blue-gray-600' />
 										</div>
 										<div className='grid grid-cols-7'>
-											<div className=' col-span-2'>
+											<div className='col-span-2 '>
 												<h2 className=''>To </h2>
 											</div>
 
-											<div className=' col-span-5'>
+											<div className='col-span-5 '>
 												<div className='w-full'>
 													<Select
 														label='Select Wallet'
 														onChange={handleSelectChange}
 													>
 														<Option value='ai'>Ai Balance</Option>
-														<Option value='main'>Trade Balance</Option>
+														{from_wallet === 'main' ? (
+															<Option value='earn'>Earn Balance</Option>
+														) : (
+															<Option value='main'>Trade Balance</Option>
+														)}
 													</Select>
 												</div>
 											</div>
@@ -161,12 +183,12 @@ const Convert = () => {
 								/>
 
 								<small className='flex items-center justify-between px-1 mt-1 text-blue-gray-700'>
-									{main ? (
+									{from_wallet === 'main' ? (
 										<span className=''>
-											Earn Balance
-											{user?.e_balance >= 0 ? (
+											Trade Balance
+											{user?.m_balance >= 0 ? (
 												<span className='mx-1 text-blue-gray-300'>
-													{Number(user?.e_balance).toFixed(2)}
+													{Number(user?.m_balance).toFixed(2)}
 												</span>
 											) : (
 												<PulseLoader size={10} color={'#fff'} />
@@ -175,10 +197,10 @@ const Convert = () => {
 										</span>
 									) : (
 										<span className=''>
-											Ai Balance
+											Earn Balance
 											{user?.m_balance >= 0 ? (
 												<span className='mx-1 text-blue-gray-300'>
-													{Number(user?.ai_balance).toFixed(2)}
+													{Number(user?.e_balance).toFixed(2)}
 												</span>
 											) : (
 												<PulseLoader size={10} color={'#fff'} />

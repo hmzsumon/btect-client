@@ -5,6 +5,7 @@ import Link from 'next/link';
 import ProtectedRoute from '@/global/ProtectedRoute';
 import { useSelector } from 'react-redux';
 import WalletHistory from '@/components/Wallet/WalletHistory';
+import DoughnutChart2 from '@/components/Wallet/DoughnutChart2';
 
 const menuItems = [
 	{
@@ -44,9 +45,7 @@ const Wallet = () => {
 							<p className=''>${totalBalance}</p>
 						</div>
 						<hr className='my-2 border border-blue-gray-800 ' />
-						<div>
-							<DoughnutChart />
-						</div>
+						<div>{user?.old_user ? <DoughnutChart2 /> : <DoughnutChart />}</div>
 						<hr className='my-2 border border-blue-gray-800 ' />
 						<div className='mt-4 md:px-4'>
 							<ul className='grid grid-cols-4 gap-2'>
