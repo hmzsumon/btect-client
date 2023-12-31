@@ -53,8 +53,10 @@ const Rewards = () => {
 			id: 1,
 			title: 'Premier',
 			level1: 5,
+			directDeposit: 500,
 			total: 30,
-			bonus: 50,
+			teamDeposit: 3000,
+			bonus: 100,
 			action: rankRecord?.ranks?.length >= 1 ? 'Claimed' : 'Claim',
 			claimed: user?.rank === 'elite' ? true : false,
 			btnActive:
@@ -66,8 +68,10 @@ const Rewards = () => {
 			id: 2,
 			title: 'Elite',
 			level1: 8,
+			directDeposit: 1500,
 			total: 50,
-			bonus: 100,
+			teamDeposit: 13000,
+			bonus: 250,
 			action: rankRecord?.ranks?.length >= 2 ? 'Claimed' : 'Claim',
 
 			claimed: user?.rank === 'elite' ? true : false,
@@ -80,8 +84,10 @@ const Rewards = () => {
 			id: 3,
 			title: 'Majestic',
 			level1: 10,
+			directDeposit: 2500,
 			total: 70,
-			bonus: 200,
+			teamDeposit: 25000,
+			bonus: 500,
 			action: rankRecord?.ranks?.length >= 3 ? 'Claimed' : 'Claim',
 
 			claimed: user?.rank === 'majestic' ? true : false,
@@ -94,8 +100,10 @@ const Rewards = () => {
 			id: 4,
 			title: 'Royal',
 			level1: 12,
+			directDeposit: 3000,
 			total: 100,
-			bonus: 300,
+			teamDeposit: 40000,
+			bonus: 700,
 			action: rankRecord?.ranks?.length >= 4 ? 'Claimed' : 'Claim',
 			claimed: user?.rank === 'royal' ? true : false,
 			btnActive:
@@ -107,8 +115,10 @@ const Rewards = () => {
 			id: 5,
 			title: 'Glorious',
 			level1: 15,
+			directDeposit: 5000,
 			total: 150,
-			bonus: 500,
+			teamDeposit: 50000,
+			bonus: 1000,
 			action: rankRecord?.ranks?.length >= 5 ? 'Claimed' : 'Claim',
 			claimed: user?.rank === 'glorious' ? true : false,
 			btnActive:
@@ -141,15 +151,27 @@ const Rewards = () => {
 											key={rank.id}
 											className='grid grid-cols-5 text-xs font-bold text-center uppercase border-blue-700 text-blue-gray-300 '
 										>
-											<li className='text-left '>{rank.title}</li>
+											<li className='flex items-center justify-start text-left '>
+												{rank.title}
+											</li>
 
 											<li>
-												{rank.level1}
-												<FaUsers className='inline-block ml-1' />
+												<div>
+													{rank.level1}
+													<FaUsers className='inline-block ml-1' />
+												</div>
+												<div>
+													{Number(rank.directDeposit).toLocaleString('en-US')}$
+												</div>
 											</li>
 											<li>
-												{rank.total}
-												<FaUsers className='inline-block ml-1' />
+												<div>
+													{rank.total}
+													<FaUsers className='inline-block ml-1' />
+												</div>
+												<div>
+													{Number(rank.teamDeposit).toLocaleString('en-US')}$
+												</div>
 											</li>
 											<li>$ {rank.bonus}</li>
 											<li className='text-right '>
@@ -185,10 +207,11 @@ const Rewards = () => {
 										<p>5 Glorious Rank </p>
 										<p>Your Direct Refer</p>
 										<p>Total Team - 600</p>
+										<p>Team Deposit- 100k USDT</p>
 									</li>
 									<li className='p-2 text-xs text-center '>
-										<p>Bonus - 500$</p>
-										<p>Monthly Salary-200$ (3 Month)</p>
+										<p>Bonus - 3000$</p>
+										<p>Monthly Salary-1000$ (3 Month)</p>
 										<p>Incentive - 3 Day, 7 Day & Monthly</p>
 									</li>
 								</ul>{' '}
@@ -202,10 +225,11 @@ const Rewards = () => {
 										<p>5 Marvelous Rank </p>
 										<p>Your Direct Refer</p>
 										<p>Total Team - 1000</p>
+										<p>Team Deposit- 200k USDT</p>
 									</li>
 									<li className='p-2 text-xs text-center '>
-										<p>Bonus - 2000$</p>
-										<p>Monthly Salary-500$ (3 Month)</p>
+										<p>Bonus - 5000$</p>
+										<p>Monthly Salary-2000$ </p>
 										<p>Incentive - 3 Day, 7 Day & Monthly</p>
 									</li>
 								</ul>

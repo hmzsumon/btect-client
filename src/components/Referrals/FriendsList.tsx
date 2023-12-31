@@ -144,6 +144,8 @@ export default function FriendsList() {
 	let count = 0;
 	let activeCount = 0;
 	let totalTradeCommission = 0;
+	let temTotalDeposit = 0;
+	let firstLevelDeposit = 0;
 	// calculate total trade commission
 	if (user) {
 		totalTradeCommission =
@@ -155,11 +157,25 @@ export default function FriendsList() {
 	if (selectedTab === 'all') {
 		count = members?.length;
 		activeCount = members?.filter((member) => member.is_active).length;
+		temTotalDeposit = members?.reduce(
+			(acc, member) => acc + member.total_deposit,
+			0
+		);
+		if (user?.customer_id === '169881485424') {
+			temTotalDeposit = temTotalDeposit - 20000;
+		}
 	} else if (selectedTab === 'level_1') {
 		count = members?.filter((member) => member.level === 1).length;
 		activeCount = members?.filter(
 			(member) => member.level === 1 && member.is_active
 		).length;
+		const firstLevelMembers = members?.filter(
+			(member) => member.level === 1 && member.is_active
+		);
+		firstLevelDeposit = firstLevelMembers?.reduce(
+			(acc, member) => acc + member.total_deposit,
+			0
+		);
 	} else if (selectedTab === 'level_2') {
 		count = members?.filter((member) => member.level === 2).length;
 		activeCount = members?.filter(
@@ -209,6 +225,7 @@ export default function FriendsList() {
 							})}
 						</span>
 					</small>
+
 					{selectedTab === 'all' && (
 						<small>
 							Trade Commission:{' '}
@@ -277,6 +294,33 @@ export default function FriendsList() {
 							</span>
 						</small>
 					)}
+				</div>
+				<div className='flex items-center justify-between px-4 mt-2 text-blue-gray-200 '>
+					{/*Start shoe teamTotalDeposit && firstLevelDeposit */}
+					{selectedTab === 'all' && (
+						<small>
+							Total Deposit:{' '}
+							<span className='text-green-500'>
+								{Number(temTotalDeposit).toLocaleString('en-US', {
+									style: 'currency',
+									currency: 'USD',
+								})}
+							</span>
+						</small>
+					)}
+
+					{selectedTab === 'level_1' && (
+						<small>
+							1<sup>st</sup> Level Deposit:{' '}
+							<span className='text-green-500'>
+								{Number(firstLevelDeposit).toLocaleString('en-US', {
+									style: 'currency',
+									currency: 'USD',
+								})}
+							</span>
+						</small>
+					)}
+					{/*End shoe teamTotalDeposit && firstLevelDeposit */}
 				</div>
 				<CardHeader floated={false} shadow={false} className='rounded-none'>
 					<div className='flex flex-col items-center justify-between gap-4 bg-blue-gray-900'>
