@@ -207,12 +207,15 @@ const Rewards = () => {
 										<p>5 Glorious Rank </p>
 										<p>Your Direct Refer</p>
 										<p>Total Team - 600</p>
-										<p>Team Deposit- 100k USDT</p>
+										<p>Team Deposit- 100k</p>
 									</li>
 									<li className='p-2 text-xs text-center '>
 										<p>Bonus - 3000$</p>
 										<p>Monthly Salary-1000$ (3 Month)</p>
-										<p>Incentive - 3 Day, 7 Day & Monthly</p>
+										<p>
+											Incentive - 3 Day,
+											<br /> 7 Day & Monthly
+										</p>
 									</li>
 								</ul>{' '}
 								{/* End Marvelous */}
@@ -225,12 +228,15 @@ const Rewards = () => {
 										<p>5 Marvelous Rank </p>
 										<p>Your Direct Refer</p>
 										<p>Total Team - 1000</p>
-										<p>Team Deposit- 200k USDT</p>
+										<p>Team Deposit- 200k</p>
 									</li>
 									<li className='p-2 text-xs text-center '>
 										<p>Bonus - 5000$</p>
 										<p>Monthly Salary-2000$ </p>
-										<p>Incentive - 3 Day, 7 Day & Monthly</p>
+										<p>
+											Incentive - 3 Day,
+											<br /> 7 Day & Monthly
+										</p>
 									</li>
 								</ul>
 								{/* End Supreme */}
