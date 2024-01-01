@@ -129,15 +129,15 @@ const CreateRobot = () => {
 		if (gridValue == 1) {
 			setMinAmount(30);
 		} else if (gridValue == 2) {
-			setMinAmount(90);
+			setMinAmount(100);
 		} else if (gridValue == 3) {
-			setMinAmount(200);
+			setMinAmount(300);
 		} else if (gridValue == 4) {
 			setMinAmount(500);
 		} else if (gridValue == 5) {
-			setMinAmount(1000);
+			setMinAmount(1500);
 		} else if (gridValue == 6) {
-			setMinAmount(2500);
+			setMinAmount(3000);
 		}
 	};
 
@@ -312,9 +312,7 @@ const CreateRobot = () => {
 								<p className='my-2 text-xs text-blue-gray-300'>
 									Profit/Grid (fees deducted)
 								</p>
-								<p className='my-2 text-xs text-blue-gray-300'>
-									4% - 10% (4% default)
-								</p>
+								<p className='my-2 text-xs text-blue-gray-300'>3% - 7%</p>
 							</div>
 						</div>
 
