@@ -278,7 +278,7 @@ const Deposit = () => {
 											)}
 										</div>
 									</div>
-									{amount >= 50 && (
+									{/* {amount >= 50 && (
 										<div className='relative flex flex-col gap-1'>
 											<label className='mb-1 ml-1 text-sm font-semibold text-gray-400 '>
 												Promo code (optional)
@@ -290,7 +290,7 @@ const Deposit = () => {
 												onChange={(e) => setPromo_code(e.target.value)}
 											/>
 										</div>
-									)}
+									)} */}
 								</div>
 							</DialogBody>
 							<div className='px-4 pb-3 '>
