@@ -46,8 +46,8 @@ const Rewards = () => {
 
 	const { data, isLoading } = useMyRankRecordQuery();
 	const { rankRecord } = data || {};
-	console.log(rankRecord);
-	console.log(rankRecord?.ranks?.length);
+	// console.log(rankRecord);
+	// console.log(rankRecord?.ranks?.length);
 	const ranks = [
 		{
 			id: 1,

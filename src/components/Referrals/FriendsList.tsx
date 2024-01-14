@@ -156,8 +156,9 @@ export default function FriendsList() {
 	// find count and active count
 	if (selectedTab === 'all') {
 		count = members?.length;
-		activeCount = members?.filter((member) => member.is_active).length;
-		temTotalDeposit = members?.reduce(
+		const activeMembers = members?.filter((member) => member.is_active);
+		activeCount = activeMembers.length;
+		temTotalDeposit = activeMembers?.reduce(
 			(acc, member) => acc + member.total_deposit,
 			0
 		);
@@ -166,13 +167,11 @@ export default function FriendsList() {
 		}
 	} else if (selectedTab === 'level_1') {
 		count = members?.filter((member) => member.level === 1).length;
-		activeCount = members?.filter(
-			(member) => member.level === 1 && member.is_active
-		).length;
-		const firstLevelMembers = members?.filter(
+		const level_1ActiveMembers = members?.filter(
 			(member) => member.level === 1 && member.is_active
 		);
-		firstLevelDeposit = firstLevelMembers?.reduce(
+		activeCount = level_1ActiveMembers.length;
+		firstLevelDeposit = level_1ActiveMembers?.reduce(
 			(acc, member) => acc + member.total_deposit,
 			0
 		);
