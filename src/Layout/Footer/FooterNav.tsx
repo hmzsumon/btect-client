@@ -26,15 +26,15 @@ const menuItems = [
 		icon: <MdOutlineStackedBarChart />,
 	},
 
-	{
-		id: 5,
-		title: 'Trade',
-		link: '/trade',
-		icon: <MdInsertChart />,
-	},
+	// {
+	// 	id: 5,
+	// 	title: 'Trade',
+	// 	link: '/trade',
+	// 	icon: <MdInsertChart />,
+	// },
 	{
 		id: 4,
-		title: 'Ai-Robot',
+		title: 'Ai-Trade',
 		link: '/ai-robot',
 		icon: <FaRobot />,
 	},

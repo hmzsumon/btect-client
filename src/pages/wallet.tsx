@@ -45,7 +45,9 @@ const Wallet = () => {
 							<p className=''>${totalBalance}</p>
 						</div>
 						<hr className='my-2 border border-blue-gray-800 ' />
-						<div>{user?.old_user ? <DoughnutChart2 /> : <DoughnutChart />}</div>
+						<div>
+							<DoughnutChart />
+						</div>
 						<hr className='my-2 border border-blue-gray-800 ' />
 						<div className='mt-4 md:px-4'>
 							<ul className='grid grid-cols-4 gap-2'>

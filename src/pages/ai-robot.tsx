@@ -109,7 +109,7 @@ const AiRobot = () => {
 								<div>
 									<div className=''>
 										<h1 className='text-2xl font-bold text-blue-gray-200'>
-											AI Robot Trading
+											AI Trading
 										</h1>
 										<p className='my-2 text-sm text-gray-500 '>
 											Deploy Gxness automation tools to trade crypto like a
