@@ -29,7 +29,7 @@ const Layout = ({ children }: PropsWithChildren<{}>) => {
 	return (
 		<>
 			<Head>
-				<title>Globalx</title>
+				<title>Gxness</title>
 			</Head>
 			<Header />
 			{children}
