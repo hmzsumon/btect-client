@@ -23,7 +23,7 @@ const Home: NextPage = () => {
 				<SimpleSlider />
 				{isAuthenticated && <Notice />}
 				{isAuthenticated && <Menu />}
-				<TradeSection />
+				{/* <TradeSection /> */}
 				<AiSection />
 				<MakeUp />
 				<Help />

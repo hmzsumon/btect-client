@@ -1,5 +1,4 @@
 import Layout from '@/Layout';
-import ProtectedRoute from '@/global/ProtectedRoute';
 import React from 'react';
 import {
 	Accordion,

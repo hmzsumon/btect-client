@@ -14,11 +14,7 @@ const allFaq = [
 			`If you have an account created through the Gxness, you need to make a deposit to activate it. `,
 		],
 	},
-	{
-		id: 1,
-		question: `How to get the registration bonus?`,
-		answer: [`You will be awarded 2USDT automatically`],
-	},
+
 	{
 		id: 2,
 		question: `How to Deposit Crypto to Gxness?`,
@@ -43,8 +39,6 @@ const allFaq = [
          After confirming the address, copy it into the [Withdrawal Address] column, and enter the amount of coins to be withdrawn.`,
 			`You can withdraw through`,
 			`TRC20`,
-			`ERC20`,
-			`Binance pay`,
 		],
 	},
 	{
@@ -55,8 +49,6 @@ const allFaq = [
 
           Gxness must pay these fees to miners to ensure that transactions are processed. Since transaction fees are dynamic, you will be charged according to the current network conditions. The fee amount is based on an estimate of the network transaction fees and can fluctuate without notice due to factors such as network congestion. Please check the most updated fee listed on each withdrawal page.`,
 			`For TRC20 transaction fee is 5%`,
-			`For ERC20 transaction fee is 5%`,
-			`For Binance pay transaction fee is 3%`,
 		],
 	},
 	{
@@ -99,7 +91,7 @@ const allFaq = [
 	},
 	{
 		id: 9,
-		question: `How does AI robot trading typically work?`,
+		question: `How does AI  trading typically work?`,
 		answer: [
 			`1. Data Analysis: AI algorithms analyze vast amounts of market data, including price movements, trading volume, news, and other relevant information.`,
 			`2. Pattern Recognition: AI systems can identify patterns, trends, and anomalies in the data that might not be easily noticeable by human traders.`,
@@ -111,7 +103,7 @@ const allFaq = [
 	},
 	{
 		id: 10,
-		question: `Benefits of AI robot trading include?`,
+		question: `Benefits of AI  trading include?`,
 		answer: [
 			`Speed: AI systems can process and react to market data in milliseconds, enabling faster execution of trades.`,
 
@@ -149,46 +141,7 @@ const allFaq = [
 			`8.Before 24 hours, If you cancel or edit the grid you will never get the profit.`,
 		],
 	},
-	{
-		id: 12,
-		question: `Win Game Rules?`,
-		answer: [
-			`You can join 1-minute, 3-minute, 5-minute win game. Here are the rules for the win game:`,
-			`If you spend 100 USDT in trade, after deducting a 2% service fee, your contract amount is 98:`,
-			`1. JOIN GREEN: If the result shows green, you get(98 * 2) 196.`,
-			`2. JOIN RED: If the result shows red, you get(98 * 2) 196.`,
-			`3. JOIN VIOLET: If the result shows violet, you will get(98 * 4.5) 441. If your result shows red or green, you will get(98 * 1.5) 147.`,
-			`4. SELECT NUMBER: If the result is the same as the number you selected, you will get(98 * 6) 588.`,
-		],
-	},
-	{
-		id: 13,
-		question: `Win game trade commission?`,
-		answer: [
-			`You also get extra commission: 40% from level-1, 30% from level-2, and 20% from level-3 (Commission coming from the service fee of the trading amount). Invite friends for more commission.`,
-		],
-	},
-	{
-		id: 14,
-		question: `What is the minimum trade amount?`,
-		answer: [`The minimum trade amount is 0.1 USDT.`],
-	},
-	{
-		id: 15,
-		question: `How many times official trade happens in a Day?`,
-		answer: [`You can participate in official trade 3 times in a day.`],
-	},
-	{
-		id: 16,
-		question: `How many stages count for the win game?`,
-		answer: [
-			`The win game is a 6-stage plan. The Teacher will make you win at any stage from the 6 stages. If the teacher fails to win you in the 6th stage, we will refund your full compensation (Only at official trade time). Of course, you have to participate in every stage, and you have to maintain a 2X or 3X plan.`,
-			`For example:`,
-			`(a) 2X plan: If you trade 1st stage-1 USDT, 2nd stage-2 USDT, 3rd stage-4 USDT, 4th stage-8 USDT,
-          5th stage-16 USDT, 6th stage-32 USDT.`,
-			`(b) 3X plan: If you trade 1st stage-1 USDT, 2nd stage-3 USDT, 3rd stage-9 USDT, 4th stage-27 USDT, 5th stage-81 USDT, 6th stage-243 USDT.`,
-		],
-	},
+
 	{
 		id: 17,
 		question: `How does the crypto market go up and down?`,
@@ -201,14 +154,6 @@ const allFaq = [
 		question: `What is the limit on Gxness trading?`,
 		answer: [
 			`With an Exclusive account you as well get access to financial research, daily market reviews and education materials. In addition, traders also do not have a limit on how many deals they open simultaneously, but the maximum deal amount is $3000.`,
-		],
-	},
-	{
-		id: 17,
-		question: `How to set up the duration for the robot?
-    `,
-		answer: [
-			`At Gxness, you can open trades with fixed durations of 30 seconds, 1 minute, 2 minutes, 3 minutes, 4 minutes and 5 minutes. Most Gxness users open trades for 30 seconds.`,
 		],
 	},
 ];

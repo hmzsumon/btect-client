@@ -18,11 +18,6 @@ const Withdraw = () => {
 
 	// check if user has completed kyc
 	const router = useRouter();
-	React.useEffect(() => {
-		if (!user?.kyc_verified) {
-			router.push('/kyc');
-		}
-	}, [user]);
 
 	const { data, refetch, isLoading, isSuccess, isError, error } =
 		useGetMyWithdrawRequestsQuery(undefined);

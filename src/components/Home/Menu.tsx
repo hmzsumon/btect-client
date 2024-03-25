@@ -22,31 +22,30 @@ const menuItems = [
 		link: '/market',
 		icon: <MdOutlineStackedBarChart />,
 	},
-	{
-		id: 6,
-		title: 'Trade',
-		link: '/trade',
-		icon: <MdInsertChart />,
-	},
 
 	{
 		id: 7,
-		title: 'Ai-Robot',
+		title: 'Ai-Trade',
 		link: '/ai-robot',
 		icon: <FaRobot />,
+	},
+	{
+		id: 8,
+		title: 'Referral',
+		link: '/referral',
+		icon: <FaUsers />,
+	},
+	{
+		id: 6,
+		title: 'Convert',
+		link: '/convert',
+		icon: <ImShare />,
 	},
 	{
 		id: 9,
 		title: 'Settings',
 		link: '/security',
 		icon: <IoSettings />,
-	},
-
-	{
-		id: 8,
-		title: 'Referral',
-		link: '/referral',
-		icon: <FaUsers />,
 	},
 ];
 
