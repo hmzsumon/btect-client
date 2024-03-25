@@ -13,19 +13,19 @@ const Privacy = () => {
 				/>
 				<p>
 					<span className='text-xl font-bold'>
-						Privacy Policy for Global-X.org
+						Privacy Policy for Gxness.com
 					</span>
 				</p>
 			</div>
 			<p>
 				<br /> <br />{' '}
 				<span className='font-bold underline '>1. Introduction</span> <br />{' '}
-				Welcome to Global-X.org (the "Site"). At Global-X.org, we value your
-				privacy and are committed to protecting your personal information. This
-				Privacy Policy outlines how we collect, use, disclose, and safeguard
-				your information when you access or use our services on the Site. By
-				using the Site, you consent to the practices described in this Privacy
-				Policy. <br /> <br />{' '}
+				Welcome to Gxness.org (the "Site"). At Gxness.org, we value your privacy
+				and are committed to protecting your personal information. This Privacy
+				Policy outlines how we collect, use, disclose, and safeguard your
+				information when you access or use our services on the Site. By using
+				the Site, you consent to the practices described in this Privacy Policy.{' '}
+				<br /> <br />{' '}
 				<span className='font-bold underline '>2. Information We Collect</span>{' '}
 				<br /> Personal Information: We may collect personal information such as
 				your name, email address, contact information, and other details you
@@ -83,7 +83,7 @@ const Privacy = () => {
 				<span className='font-bold underline '>9. Contact Us</span>
 				<br />
 				If you have any questions or concerns about this Privacy Policy, please
-				contact us at Global-Xservice24@gamil.com
+				contact us at gxnessservice24@gamil.com
 			</p>
 		</div>
 	);

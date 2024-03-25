@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 	const { isAuthenticated } = useSelector((state: any) => state.auth);
 	return (
 		<Layout>
-			<main className={`pt-20 ${isAuthenticated && 'pb-14'}`}>
+			<main className={`pt-24 ${isAuthenticated && 'pb-14'}`}>
 				{!isAuthenticated && <Hero />}
 				<SimpleSlider />
 				{isAuthenticated && <Notice />}

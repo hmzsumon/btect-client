@@ -250,12 +250,12 @@ const Deposit = () => {
 
 										<div className='flex items-center justify-between '>
 											{tnxError ? (
-												<div className=' flex flex-col'>
+												<div className='flex flex-col '>
 													<p className='text-xs text-red-500'>{tnxError}</p>
 													<div className='flex items-center justify-center '>
 														<button>
 															<a
-																href='https://t.me/Global-X2020'
+																href='https://t.me/gxness24'
 																target='_blank'
 																rel='noopener noreferrer'
 																className='text-yellow-700 '

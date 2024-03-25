@@ -58,7 +58,7 @@ const Market = () => {
 	const [ticker, setTicker] = React.useState<any>(null);
 	useEffect(() => {
 		const socket = socketIOClient(
-			'https://Global-X-trade-api-372edeb4df58.herokuapp.com'
+			'https://trade-api-85a8c3cba647.herokuapp.com'
 		);
 		socket.on('tickers', (data: any[]) => {
 			// console.log(data);

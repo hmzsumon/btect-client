@@ -104,7 +104,7 @@ const CreateRobot = () => {
 
 	useEffect(() => {
 		const socket = socketIOClient(
-			'https://globalx-trade-api-53d9c05c8cdf.herokuapp.com/'
+			'https://trade-api-85a8c3cba647.herokuapp.com'
 		);
 		socket.on('tickers', (data: any[]) => {
 			setTickers(data);

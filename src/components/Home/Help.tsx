@@ -11,7 +11,7 @@ const allFaq = [
 		id: 1,
 		question: `How to activate my account?`,
 		answer: [
-			`If you have an account created through the Global-X, you need to make a deposit to activate it. `,
+			`If you have an account created through the Gxness, you need to make a deposit to activate it. `,
 		],
 	},
 	{
@@ -21,9 +21,9 @@ const allFaq = [
 	},
 	{
 		id: 2,
-		question: `How to Deposit Crypto to Global-X?`,
+		question: `How to Deposit Crypto to Gxness?`,
 		answer: [
-			`Cryptocurrencies are deposited through a "deposit address". To view your Global-X wallet deposit address, go to [Wallet] - [Overview] - [Deposit]. Then copy and paste the TRC20 address to the platform or wallet you are withdrawing from to transfer it to your Global-X wallet. Complete the deposit.`,
+			`Cryptocurrencies are deposited through a "deposit address". To view your Gxness wallet deposit address, go to [Wallet] - [Overview] - [Deposit]. Then copy and paste the TRC20 address to the platform or wallet you are withdrawing from to transfer it to your Gxness wallet. Complete the deposit.`,
 		],
 	},
 	{
@@ -36,9 +36,9 @@ const allFaq = [
 
 	{
 		id: 3,
-		question: `How to Withdraw from Global-X?`,
+		question: `How to Withdraw from Gxness?`,
 		answer: [
-			`If you want to withdraw the cryptocurrency in your Global-X account to another platform account or your digital wallet, you can quickly withdraw the currency through the [Withdraw] function of [Wallet]. Cryptocurrency is withdrawn through an "address." Before withdrawing coins, you need to find the recharge address on the corresponding withdrawal platform and copy the address to the withdrawal address of the Global-X platform. Then you can withdraw your assets to the account of the corresponding platform.
+			`If you want to withdraw the cryptocurrency in your Gxness account to another platform account or your digital wallet, you can quickly withdraw the currency through the [Withdraw] function of [Wallet]. Cryptocurrency is withdrawn through an "address." Before withdrawing coins, you need to find the recharge address on the corresponding withdrawal platform and copy the address to the withdrawal address of the Gxness platform. Then you can withdraw your assets to the account of the corresponding platform.
 
          After confirming the address, copy it into the [Withdrawal Address] column, and enter the amount of coins to be withdrawn.`,
 			`You can withdraw through`,
@@ -51,9 +51,9 @@ const allFaq = [
 		id: 4,
 		question: `What are crypto withdrawal fees?`,
 		answer: [
-			`Withdrawal transactions to crypto addresses outside of Global-X typically incur a "transaction fee" or "network fee." This fee is not paid to Global-X but to miners or validators responsible for processing the transactions and securing the respective blockchain network. (Details can be viewed on the Deposit & Withdrawal Fees page).
+			`Withdrawal transactions to crypto addresses outside of Gxness typically incur a "transaction fee" or "network fee." This fee is not paid to Gxness but to miners or validators responsible for processing the transactions and securing the respective blockchain network. (Details can be viewed on the Deposit & Withdrawal Fees page).
 
-          Global-X must pay these fees to miners to ensure that transactions are processed. Since transaction fees are dynamic, you will be charged according to the current network conditions. The fee amount is based on an estimate of the network transaction fees and can fluctuate without notice due to factors such as network congestion. Please check the most updated fee listed on each withdrawal page.`,
+          Gxness must pay these fees to miners to ensure that transactions are processed. Since transaction fees are dynamic, you will be charged according to the current network conditions. The fee amount is based on an estimate of the network transaction fees and can fluctuate without notice due to factors such as network congestion. Please check the most updated fee listed on each withdrawal page.`,
 			`For TRC20 transaction fee is 5%`,
 			`For ERC20 transaction fee is 5%`,
 			`For Binance pay transaction fee is 3%`,
@@ -79,14 +79,14 @@ const allFaq = [
 		id: 6,
 		question: `What should I do if I withdraw coins to the wrong address?`,
 		answer: [
-			`When withdrawing coins, Global-X will enter the automatic withdrawal sequence after you complete the security verification and click [Submit], which cannot be stopped. If you fill in the wrong address, Global-X will not be able to find the recipient of your funds due to the anonymity of the blockchain address, so it will not be able to provide you with further assistance.`,
+			`When withdrawing coins, Gxness will enter the automatic withdrawal sequence after you complete the security verification and click [Submit], which cannot be stopped. If you fill in the wrong address, Gxness will not be able to find the recipient of your funds due to the anonymity of the blockchain address, so it will not be able to provide you with further assistance.`,
 		],
 	},
 	{
 		id: 7,
-		question: `Transfer the wrong currency to the Global-X address:`,
+		question: `Transfer the wrong currency to the Gxness address:`,
 		answer: [
-			`If you transfer the wrong currency to the Global-X address, Global-X will not receive the corresponding blockchain assets. Due to the anonymity of the blockchain, it cannot help you retrieve it. Please confirm your deposit information before depositing to avoid asset loss.`,
+			`If you transfer the wrong currency to the Gxness address, Gxness will not receive the corresponding blockchain assets. Due to the anonymity of the blockchain, it cannot help you retrieve it. Please confirm your deposit information before depositing to avoid asset loss.`,
 		],
 	},
 
@@ -198,7 +198,7 @@ const allFaq = [
 	},
 	{
 		id: 17,
-		question: `What is the limit on Global-X trading?`,
+		question: `What is the limit on Gxness trading?`,
 		answer: [
 			`With an Exclusive account you as well get access to financial research, daily market reviews and education materials. In addition, traders also do not have a limit on how many deals they open simultaneously, but the maximum deal amount is $3000.`,
 		],
@@ -208,7 +208,7 @@ const allFaq = [
 		question: `How to set up the duration for the robot?
     `,
 		answer: [
-			`At Global-X, you can open trades with fixed durations of 30 seconds, 1 minute, 2 minutes, 3 minutes, 4 minutes and 5 minutes. Most Global-X users open trades for 30 seconds.`,
+			`At Gxness, you can open trades with fixed durations of 30 seconds, 1 minute, 2 minutes, 3 minutes, 4 minutes and 5 minutes. Most Gxness users open trades for 30 seconds.`,
 		],
 	},
 ];
@@ -280,7 +280,7 @@ const Help = () => {
 						<div className='space-y-2 '>
 							<h1 className='text-xl font-bold '>Please scan the QR code</h1>
 							<p>
-								Please scan the QR code and Download the Global-X App from Play
+								Please scan the QR code and Download the Gxness App from Play
 								Store
 							</p>
 							<button onClick={handleOpen}>
@@ -299,7 +299,7 @@ const Help = () => {
 				>
 					<div className='flex items-center justify-center py-3 '>
 						<h4 className='text-sm font-bold text-center text-blue-gray-200'>
-							Scan QR Code to Download Global-X App
+							Scan QR Code to Download Gxness App
 						</h4>
 						<IoCloseCircleOutline
 							className='absolute text-2xl cursor-pointer text-blue-gray-600 right-3 top-2 hover:text-red-500'
@@ -309,7 +309,7 @@ const Help = () => {
 					<hr className='my-2 border border-black_3' />
 					<DialogBody className='px-0 overflow-auto '>
 						<div className=''>
-							<img src='./Global-X-app.png' alt='' className='mx-auto w-60' />
+							<img src='./Gxness-app.png' alt='' className='mx-auto w-60' />
 						</div>
 					</DialogBody>
 				</Dialog>

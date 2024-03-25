@@ -5,7 +5,7 @@ if (process.env.NODE_ENV === 'development') {
 	console.log('Running in development mode');
 } else {
 	//Global-X-api-1901b8e6064a.herokuapp.com/
-	https: baseUrl = 'https://globalx-api-911660dfa77b.herokuapp.com/api/v1';
+	https: baseUrl = 'https://gxness-ea84b2197e3d.herokuapp.com/api/v1';
 	// Code specific to production mode
 	console.log('Running in production mode');
 }

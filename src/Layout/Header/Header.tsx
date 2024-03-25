@@ -155,10 +155,10 @@ export default function Header() {
 
 	return (
 		<>
-			<Navbar className='fixed z-10 max-w-full px-4 py-2 border-0 rounded-none bg-black_2 top h-max lg:px-8 lg:py-4'>
+			<Navbar className='fixed z-10 max-w-full px-4 py-1 border-0 rounded-none bg-black_2 top h-max lg:px-8 lg:py-4'>
 				<div className='flex items-center justify-between text-blue-gray-100'>
 					<Link href='/'>
-						<Image src='/rapid-logo1.png' alt='logo' width={100} height={40} />
+						<Image src='/rapid-logo1.png' alt='logo' width={70} height={40} />
 					</Link>
 					{token ? (
 						<div className='flex items-center gap-x-4 '>
