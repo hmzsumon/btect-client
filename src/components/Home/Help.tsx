@@ -185,7 +185,7 @@ const Help = () => {
 							</p>
 							<button>
 								<a
-									href='https://t.me/Globalx2024'
+									href='https://t.me/gxness24'
 									target='_blank'
 									rel='noopener noreferrer'
 									className='text-yellow-700 '
