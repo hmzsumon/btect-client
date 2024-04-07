@@ -179,13 +179,13 @@ const AddPaymentMethod = () => {
 								<input
 									className={`px-4 py-2 ${
 										codeError && 'border-red-500'
-									} text-gray-700 bg-transparent border rounded hover:border-yellow-500 focus:border-yellow-600  focus:outline-none`}
+									} text-gray-700 bg-transparent border rounded hover:border-green-500 focus:border-green-600  focus:outline-none`}
 									type='text'
 									value={code}
 									onChange={(e) => handleChange(e)}
 								/>
 								<button
-									className='absolute text-xs font-bold text-yellow-800 right-2 top-9'
+									className='absolute text-xs font-bold text-green-800 right-2 top-9'
 									onClick={handleResend}
 								>
 									{isResend ? (
@@ -211,7 +211,7 @@ const AddPaymentMethod = () => {
 
 							<div className='my-6 space-y-4'>
 								<button
-									className='w-full py-3 font-semibold text-gray-800 bg-yellow-700 rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-yellow-700'
+									className='w-full py-3 font-semibold text-gray-100 bg-green-700 rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-yellow-700'
 									onClick={next}
 									disabled={isLoading || isResendLoading || code.length < 6}
 								>

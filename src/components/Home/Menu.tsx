@@ -54,7 +54,7 @@ export default function Menu() {
 	// console.log(router.pathname);
 	return (
 		<div className='px-6 my-8 '>
-			<div className='py-6 border-0 rounded-md md:px-6 bg-black_2 h-max lg:py-4'>
+			<div className='py-6 border-0 rounded-md md:px-6 bg-black_2 opacity-90 h-max lg:py-4'>
 				<ul className='grid grid-cols-3 gap-8'>
 					{menuItems.map((item) => (
 						<Link
@@ -62,7 +62,7 @@ export default function Menu() {
 							href={item.link}
 							className={`flex gap-2  flex-col items-center 
               hover:scale-125 transition-all duration-500
-              hover:text-yellow-900 text-yellow-700
+              hover:text-green-500 text-green-700
               
               `}
 						>

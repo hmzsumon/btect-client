@@ -120,7 +120,7 @@ const AiRobot = () => {
 									<div>
 										<span className=' text-blue-gray-400'>
 											Ai Balance:{' '}
-											<span className='text-yellow-700'>
+											<span className='text-green-700'>
 												{Number(user?.ai_balance).toLocaleString('en-US', {
 													minimumFractionDigits: 2,
 												})}{' '}
@@ -155,12 +155,12 @@ const AiRobot = () => {
 
 								<div className='grid grid-cols-2 gap-2 my-4 '>
 									<Link href='/convert'>
-										<Button color='amber' className='w-full '>
+										<Button color='green' className='w-full '>
 											Convert
 										</Button>
 									</Link>
 									<Link href='/ai-history'>
-										<Button color='amber' className='w-full '>
+										<Button color='green' className='w-full '>
 											History
 										</Button>
 									</Link>

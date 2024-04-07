@@ -101,7 +101,7 @@ const Convert = () => {
 		<Layout>
 			<ProtectedRoute>
 				<div className='h-screen px-2 py-20 md:h-auto withdraw-wrapper'>
-					<div className='relative px-4 py-6 mx-auto rounded-lg bg-black_2 md:w-7/12'>
+					<div className='relative px-4 py-6 mx-auto rounded-lg bg-black_2 opacity-95 md:w-7/12'>
 						<div className='flex items-center justify-between mb-4'>
 							<div>
 								<HiArrowSmLeft
@@ -138,7 +138,7 @@ const Convert = () => {
 														onChange={handleFromWalletChange}
 													>
 														<Option value='earn'>Earn Balance</Option>
-														<Option value='main'>Trade Balance</Option>
+														<Option value='main'>Main Balance</Option>
 													</Select>
 												</div>
 											</div>
@@ -228,7 +228,7 @@ const Convert = () => {
 
 							<div className='flex items-center justify-center '>
 								<button
-									className='w-full py-2 font-bold bg-yellow-700 rounded-lg text-blue-gray-900 disabled:opacity-50 disabled:cursor-not-allowed '
+									className='w-full py-2 font-bold bg-green-700 rounded-lg text-blue-gray-100 disabled:opacity-50 disabled:cursor-not-allowed '
 									disabled={!amount || amount < 1 || isLoading}
 									onClick={handleConvert}
 								>

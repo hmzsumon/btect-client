@@ -18,13 +18,13 @@ const Home: NextPage = () => {
 	const { isAuthenticated } = useSelector((state: any) => state.auth);
 	return (
 		<Layout>
-			<main className={`pt-24 ${isAuthenticated && 'pb-14'}`}>
+			<main className={`pt-24 home-wrapper  ${isAuthenticated && 'pb-14'} `}>
 				{!isAuthenticated && <Hero />}
-				<SimpleSlider />
-				{isAuthenticated && <Notice />}
+				{/* <SimpleSlider /> */}
+				{/* {isAuthenticated && <Notice />} */}
 				{isAuthenticated && <Menu />}
 				{/* <TradeSection /> */}
-				<AiSection />
+				{/* <AiSection /> */}
 				<MakeUp />
 				<Help />
 				{!isAuthenticated && <StartEaring />}

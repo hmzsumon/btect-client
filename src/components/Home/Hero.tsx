@@ -53,7 +53,7 @@ const Hero = () => {
 						</div> */}
 						<div className=' space-y-4 md:w-[70%]'>
 							<button
-								className='flex items-center justify-center w-full gap-1 py-2 font-semibold text-gray-900 bg-yellow-700 rounded'
+								className='flex items-center justify-center w-full gap-1 py-2 font-semibold text-gray-100 bg-green-700 rounded'
 								onClick={() =>
 									router.push({
 										pathname: '/register',

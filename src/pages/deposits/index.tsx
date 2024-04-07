@@ -115,8 +115,8 @@ const Deposit = () => {
 	return (
 		<Layout>
 			<ProtectedRoute>
-				<div className='px-2 py-20 md:py-24 '>
-					<div className='px-4 py-4 mx-auto rounded md:w-6/12 bg-black_2'>
+				<div className='px-2 py-20 md:py-24 deposit-wrapper '>
+					<div className='px-4 py-4 mx-auto rounded md:w-6/12 bg-black_2 opacity-90'>
 						<div className='flex items-center justify-between '>
 							<div className=''>
 								<HiArrowSmLeft
@@ -137,7 +137,7 @@ const Deposit = () => {
 						</div>
 						<div className='flex flex-col items-center justify-center my-4 '>
 							<img
-								src='/my_kucoin.png'
+								src='/kuria_qr_cod.png'
 								alt='Deposit'
 								className=' w-36 md:w-60'
 							/>
@@ -155,10 +155,10 @@ const Deposit = () => {
 								<p className='text-sm text-blue-gray-400'>Wallet Address</p>
 								<div className='flex items-center justify-between'>
 									<p className='text-sm text-blue-gray-100'>
-										TW4usTtaHFkxvSs9DzmDrNhjftxH34XZuD
+										TThQMT3Z6sRKGW6wehG8fvMSRR3njbYbm5
 									</p>
 									<CopyToClipboard
-										text={'TW4usTtaHFkxvSs9DzmDrNhjftxH34XZuD'}
+										text={'TThQMT3Z6sRKGW6wehG8fvMSRR3njbYbm5'}
 										size='text-md'
 									/>
 								</div>
@@ -187,7 +187,7 @@ const Deposit = () => {
 						</div>
 						<div className=''>
 							<button
-								className='w-full py-1 font-bold bg-yellow-700 rounded-sm text-blue-gray-900 disabled:opacity-50 disabled:cursor-not-allowed'
+								className='w-full py-2 font-bold bg-green-700 rounded-sm text-blue-gray-100 disabled:opacity-50 disabled:cursor-not-allowed'
 								onClick={handleOpen}
 								disabled={isLoading || user?.is_deposit_requested}
 							>

@@ -38,8 +38,8 @@ const Wallet = () => {
 	return (
 		<Layout>
 			<ProtectedRoute>
-				<div className='px-2 pt-20 pb-24 '>
-					<div className='px-4 py-6 mx-auto rounded-lg text-blue-gray-200 bg-black_2 md:w-7/12'>
+				<div className='px-2 pt-20 pb-24 wallet-wrapper '>
+					<div className='px-4 py-6 mx-auto rounded-lg text-blue-gray-200 opacity-90 bg-black_2 md:w-7/12'>
 						<div className='space-y-2'>
 							<p className='text-xs text-blue-gray-300'>Total Balance</p>
 							<p className=''>${totalBalance}</p>
@@ -53,7 +53,7 @@ const Wallet = () => {
 							<ul className='grid grid-cols-4 gap-2'>
 								{menuItems.map((item) => (
 									<Link href={item.url} key={item.id}>
-										<button className='w-full p-2 text-xs font-bold bg-yellow-800 rounded-lg text-blue-gray-900 hover:bg-blue-gray-800 hover:text-blue-gray-100 md:text-sm'>
+										<button className='w-full p-2 text-xs font-bold bg-green-700 rounded-lg text-blue-gray-100 hover:bg-blue-gray-800 hover:text-blue-gray-100 md:text-sm'>
 											{item.title}
 										</button>
 									</Link>

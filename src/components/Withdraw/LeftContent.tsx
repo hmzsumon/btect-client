@@ -247,7 +247,7 @@ const LeftContent = () => {
 
 				<div className='flex flex-col items-center justify-center '>
 					<button
-						className='flex items-center justify-center w-full py-2 font-bold bg-yellow-700 rounded-lg text-blue-gray-900 disabled:opacity-50 disabled:cursor-not-allowed '
+						className='flex items-center justify-center w-full py-2 font-bold bg-green-700 rounded-lg text-blue-gray-100 disabled:opacity-50 disabled:cursor-not-allowed '
 						disabled={
 							errorText
 								? true
@@ -330,7 +330,7 @@ const LeftContent = () => {
 
 							<div className='my-6 space-y-4'>
 								<button
-									className='w-full py-3 font-semibold text-gray-800 bg-yellow-700 rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-yellow-700'
+									className='w-full py-3 font-semibold text-gray-800 bg-green-700 rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-green-700'
 									onClick={next}
 									disabled={isLoading || isResendLoading || code.length < 6}
 								>

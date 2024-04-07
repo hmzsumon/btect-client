@@ -75,7 +75,7 @@ const Market = () => {
 	return (
 		<Layout>
 			<ProtectedRoute>
-				<div className='pt-14 md:pt-[5.5rem] pb-[4.5rem] md:pb-[5rem]'>
+				<div className='pt-14 md:pt-[5.5rem] pb-[4.5rem] md:pb-[5rem] '>
 					<div className='py-4 mx-auto rounded md:w-6/12 bg-black_2'>
 						<div>
 							<h2 className='text-xl text-center text-blue-gray-300'>

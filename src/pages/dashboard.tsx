@@ -1,30 +1,39 @@
-import UserInfo from '@/components/Dashboard.tsx/UserInfo';
-import UserLayout from '@/components/layout/UserLayout';
-import { useLoadUserQuery } from '@/features/auth/authApi';
-import { getCookie } from '@/utils/cookie';
-import { HomeIcon } from '@/utils/icons/CommonIcons';
-import React, { useEffect } from 'react';
+import { NextPage } from 'next';
+import Head from 'next/head';
+import Hero from '@components/Home/Hero';
+import SimpleSlider from '@components/Home/Carousel';
+import Help from '@components/Home/Help';
+import StartEaring from '@components/Home/StartEaring';
+import Layout from '@/Layout';
 import { useSelector } from 'react-redux';
-import { useRouter } from 'next/router';
+import Footer from '@/Layout/Footer/Footer';
+import Notice from '@/components/Home/Notice';
+import Menu from '@/components/Home/Menu';
+import TradeSection from '@/components/Home/TradeSection';
+import AiSection from '@/components/Home/AiSection';
+import WinGame from '@/components/Home/WinGame';
+import MakeUp from '@/components/Home/MakeUp';
+import UserInfo from '@/components/Dashboard.tsx/UserInfo';
 
-const dashboard = () => {
-	const { user } = useSelector((state: any) => state.auth);
-	// useLoadUserQuery();
-	const router = useRouter();
-
-	useEffect(() => {
-		if (user?.is_block) {
-			router.push('/block');
-		}
-	}, [user]);
-
+const Dashboard: NextPage = () => {
+	const { isAuthenticated } = useSelector((state: any) => state.auth);
 	return (
-		<UserLayout>
-			<div>
-				<UserInfo />
-			</div>
-		</UserLayout>
+		<Layout>
+			<main className={`pt-24 ${isAuthenticated && 'pb-14'}`}>
+				<div>
+					<UserInfo />
+				</div>
+
+				<Menu />
+				{/* <TradeSection /> */}
+				<AiSection />
+				<MakeUp />
+				<Help />
+				{!isAuthenticated && <StartEaring />}
+				{!isAuthenticated && <Footer />}
+			</main>
+		</Layout>
 	);
 };
 
-export default dashboard;
+export default Dashboard;

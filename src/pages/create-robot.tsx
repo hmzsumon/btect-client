@@ -122,22 +122,19 @@ const CreateRobot = () => {
 	}, [tickers, symbol]);
 
 	// handle set grid
-	const handleSetGrid = (e: any) => {
-		const gridValue = e.target.value;
-		setGrid(gridValue);
-
-		if (gridValue == 1) {
-			setMinAmount(30);
-		} else if (gridValue == 2) {
-			setMinAmount(100);
-		} else if (gridValue == 3) {
-			setMinAmount(300);
-		} else if (gridValue == 4) {
-			setMinAmount(500);
-		} else if (gridValue == 5) {
-			setMinAmount(1500);
-		} else if (gridValue == 6) {
-			setMinAmount(3000);
+	const handleSetGrid = (a: any) => {
+		if (a >= 30 && a <= 99) {
+			setGrid(1);
+		} else if (a >= 100 && a <= 299) {
+			setGrid(2);
+		} else if (a >= 300 && a <= 499) {
+			setGrid(3);
+		} else if (a >= 500 && a <= 1499) {
+			setGrid(4);
+		} else if (a >= 1500 && a <= 2999) {
+			setGrid(5);
+		} else if (a >= 3000) {
+			setGrid(6);
 		}
 	};
 
@@ -157,10 +154,11 @@ const CreateRobot = () => {
 			}
 		} else {
 			setStateError(true);
-			setErrorText(
-				`If Grid ${grid} Amount must be equal or greater than ${minAmount} USDT`
-			);
+			setErrorText(`Amount must be equal or greater than ${minAmount} USDT`);
 		}
+
+		// check grid
+		handleSetGrid(newAmount);
 	};
 
 	// handle create robot
@@ -281,44 +279,8 @@ const CreateRobot = () => {
 						{/* End Price Range */}
 
 						<div>
-							<h2 className='my-2'>2. Grids</h2>
-							<div className='relative '>
-								{/* <input
-									type='number'
-									value={grid}
-									placeholder='1-6'
-									className='w-full p-2 rounded-md outline-none bg-black_3 placeholder-blue-gray-400'
-									onChange={handleSetGrid}
-								/> */}
-								<select
-									name=''
-									id=''
-									className='w-full p-2 rounded-md outline-none bg-black_3 placeholder-blue-gray-400'
-									value={grid}
-									onChange={handleSetGrid}
-								>
-									<option value='1'>1</option>
-									<option value='2'>2</option>
-									<option value='3'>3</option>
-									<option value='4'>4</option>
-									<option value='5'>5</option>
-									<option value='6'>6</option>
-								</select>
-								<span className='absolute right-6 top-2 text-blue-gray-200'>
-									Arithmetic
-								</span>
-							</div>
 							<div className='flex items-center justify-between '>
-								<p className='my-2 text-xs text-blue-gray-300'>
-									Profit/Grid (fees deducted)
-								</p>
-								<p className='my-2 text-xs text-blue-gray-300'>3% - 7%</p>
-							</div>
-						</div>
-
-						<div>
-							<div className='flex items-center justify-between '>
-								<h2 className=''>3. Investment</h2>
+								<h2 className=''>2. Investment</h2>
 								<div className='flex items-center pr-2 my-2 text-xs gap-x-1'>
 									Avbl:{' '}
 									<span
@@ -332,7 +294,7 @@ const CreateRobot = () => {
 										USDT
 									</span>
 									<span onClick={handleOpen}>
-										<AiFillPlusCircle className='inline-block w-4 h-4 text-yellow-700 cursor-pointer' />
+										<AiFillPlusCircle className='inline-block w-4 h-4 text-green-700 cursor-pointer' />
 									</span>
 								</div>
 							</div>
@@ -365,7 +327,7 @@ const CreateRobot = () => {
 						{/* Start Submit Button */}
 						<div className='my-4 '>
 							<button
-								className='w-full py-2 font-bold text-gray-800 bg-yellow-700 rounded-md disabled:opacity-40 disabled:cursor-not-allowed '
+								className='w-full py-2 font-bold text-gray-100 bg-green-700 rounded-md disabled:opacity-40 disabled:cursor-not-allowed '
 								disabled={
 									stateError ||
 									!ticker?.lowPrice ||

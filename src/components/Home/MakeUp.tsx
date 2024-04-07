@@ -3,7 +3,7 @@ import React from 'react';
 const MakeUp = () => {
 	return (
 		<div className='px-6 md:px-10 '>
-			<div className='px-2 py-6 bg-black_1'>
+			<div className='px-2 py-6 bg-black_1 opacity-90'>
 				<div className='space-y-2 '>
 					<h2 className='text-2xl text-center text-blue-gray-100'>
 						The numbers that make up Gxness

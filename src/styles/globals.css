@@ -11,10 +11,24 @@ body {
 	color: #fff;
 }
 
+.home-wrapper {
+	background-image: url('/bg_5.webp');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.deposit-wrapper {
+	background-image: url('/bg_6.webp');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .withdraw-wrapper,
 .referral-wrapper,
 .wallet-wrapper {
-	background-image: url('/bg2.png');
+	background-image: url('/bg_4.webp');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
